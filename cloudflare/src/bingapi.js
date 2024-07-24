@@ -685,6 +685,7 @@ function helperResponseJson(response, statusCode = 200) {
  * @returns {Promise<string>}
  */
 async function getCctCookie(options) {
+  console.log("准备发起人机验证!!!!");
   const IG = crypto.randomUUID().replace(/-/g, '').toUpperCase();
   let newReq = new Request(options.BYPASS_SERVER, {
     method: 'POST',
@@ -699,6 +700,7 @@ async function getCctCookie(options) {
     }),
   });
   let res = await fetch(newReq);
+  console.log("人机验证结果：" + res.ok);
   if (!res.ok) {
     return options.cookie || '';
   }
