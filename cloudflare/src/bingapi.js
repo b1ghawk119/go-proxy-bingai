@@ -1,8 +1,8 @@
 const AUTHOR = 'Harry-zklcdc/go-proxy-bingai';
 
 const SPILT = '\x1e';
-const BING_ORIGIN = 'https://www.bing.com';
-const SYDNEY_ORIGIN = 'https://sydney.bing.com';
+const BING_ORIGIN = 'https://b1ghawk-nbing-new.hf.space';
+const SYDNEY_ORIGIN = 'https://b1ghawk-nbing-new.hf.space';
 
 export const bingchatModel = {
   PRECISE: 'Precise',          // 精准
@@ -139,7 +139,7 @@ export async function bingapiChat(request, options) {
   const cctCookie = (await getCctCookie(options)) + '; ' + options.cookie + '; ';
 
   // Get New Conversation
-  let newReq = new Request(TURING_ORIGIN + '/turing/conversation/create?bundleVersion=1.1467.6', {
+  let newReq = new Request(BING_ORIGIN + '/turing/conversation/create?bundleVersion=1.1467.6', {
     headers: getNewHeaders(cctCookie),
   })
   let res = await fetch(newReq);
