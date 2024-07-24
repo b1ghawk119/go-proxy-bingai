@@ -136,7 +136,7 @@ export async function bingapiChat(request, options) {
   }
 
   // Get CCT Cookie
-  const cctCookie = options.cookie + '; ' + (await getCctCookie(options));
+  const cctCookie = (await getCctCookie(options)) + '; ' + options.cookie + '; ';
 
   // Get New Conversation
   let newReq = new Request(BING_ORIGIN + '/turing/conversation/create?bundleVersion=1.1467.6', {
@@ -546,7 +546,7 @@ export async function bingapiImage(request, options) {
     return helperResponseJson({ error: 'Prompt is required' }, 400);
   }
 
-  const cctCookie = options.cookie + '; ' + (await getCctCookie(options));
+  const cctCookie = (await getCctCookie(options)) + '; ' + options.cookie + '; ';
 
   const headers = getNewHeaders(cctCookie);
   headers.set('Content-Type', 'application/x-www-form-urlencoded');
