@@ -564,7 +564,7 @@ export async function workerFetch(request, env, ctx,home) {
 
     newHeaders.set('Cookie', cookies);
     const oldUA = request.headers.get('user-agent') || '';
-    const isMobile = oldUA.includes('Mobile') || oldUA.includes('Android');
+    let isMobile = oldUA.includes('Mobile') || oldUA.includes('Android');
     if (isMobile = true) {
       newHeaders.set(
         'user-agent',
