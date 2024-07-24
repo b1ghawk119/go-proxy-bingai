@@ -23,8 +23,6 @@ export const WEB_CONFIG = {
 export const RAND_IP_COOKIE_NAME = 'BingAI_Rand_IP';
 export const AUTH_KEY_COOKIE_NAME = 'BingAI_Auth_Key';
 
-// export const SYDNEY_ORIGIN = 'https://b1ghawk-nbing-new.hf.space';
-// export const BING_ORIGIN = 'https://b1ghawk-nbing-new.hf.space';
 export const SYDNEY_ORIGIN = 'https://b1ghawk-nbing-new.hf.space';
 export const TURING_ORIGIN = 'https://b1ghawk-nbing-new.hf.space';
 export const BING_ORIGIN = 'https://www.bing.com';
