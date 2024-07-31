@@ -497,7 +497,7 @@ export async function workerFetch(request, env, ctx,home) {
       }
     });
     newHeaders.set('host', targetUrl.host);
-    newHeaders.set('origin', BING_ORIGIN);
+    newHeaders.set('origin', reqOrigin);
     if (request.headers.has('referer') && request.headers.get('referer').indexOf('web/compose.html') != -1) {
       newHeaders.set('referer', 'https://edgeservices.bing.com/edgesvc/compose');
     } else {
