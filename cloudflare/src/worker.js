@@ -454,10 +454,13 @@ export async function workerFetch(request, env, ctx,home) {
       return Response.json({ code: 200, message: 'success', data: { isSysCK: false, isAuth: isAuth, info: CUSTOM_OPTIONS.INFO } })
     }
     let targetUrl;
+    let reqOrigin = BING_ORIGIN;
     if (currentUrl.pathname.startsWith('/sydney')) {
       targetUrl = new URL(SYDNEY_ORIGIN + currentUrl.pathname + currentUrl.search);
+      reqOrigin = SYDNEY_ORIGIN;
     } else if (currentUrl.pathname.startsWith('/turing')) {
       targetUrl = new URL(TURING_ORIGIN + currentUrl.pathname + currentUrl.search);
+      reqOrigin = TURING_ORIGIN;
     } else if (currentUrl.pathname.startsWith('/th')) {
       targetUrl = new URL(BING_SOURCE_ORIGIN + currentUrl.pathname.replaceAll('/th/th', '/th') + currentUrl.search);
     } else if (currentUrl.pathname.startsWith('/edgesvc')) {
