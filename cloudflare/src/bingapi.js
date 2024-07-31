@@ -4,8 +4,8 @@ const SPILT = '\x1e';
 const BING_ORIGIN = 'https://dc.b1ng.chat';
 const SYDNEY_ORIGIN = 'https://dc.b1ng.chat';
 
-//const BING_ORIGIN = 'https://b1ghawk-nbing-new.hf.space';
-//const SYDNEY_ORIGIN = 'https://b1ghawk-nbing-new.hf.space';
+const BING_ORIGIN = 'https://www.bing.com';
+const SYDNEY_ORIGIN = 'https://www.bing.com';
 
 export const bingchatModel = {
   PRECISE: 'Precise',          // 精准
