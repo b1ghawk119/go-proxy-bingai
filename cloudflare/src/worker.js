@@ -534,7 +534,7 @@ export async function workerFetch(request, env, ctx,home) {
       if (currentUrl.searchParams.get('h') != '' && currentUrl.searchParams.get('h') != null && currentUrl.searchParams.get('h') != undefined) {
         let params = currentUrl.searchParams;
         params.delete('h');
-        targetUrl = new URL(BING_ORIGIN + '/turing/captcha/challenge' + (params.toString() == '' ? '' : '?' + params.toString()));
+        targetUrl = new URL(TURING_ORIGIN + '/turing/captcha/challenge' + (params.toString() == '' ? '' : '?' + params.toString()));
       } else {
         return challenge(request);
       }
